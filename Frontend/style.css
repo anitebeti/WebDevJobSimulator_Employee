@@ -1,0 +1,41 @@
+<style>
+
+    div {
+        margin: auto;
+        text-align: center;
+    }
+
+    .col-xl-2 {
+        padding:10px;
+        font-size: 14px;
+    }
+
+    #tabel {
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        text-align: center;
+        font-size: 14px;
+        
+    }
+
+    tr {
+        background-color: #f5f5dc;
+    }
+
+    body {
+        
+        background-image: url('https://www.pngkit.com/png/full/5-57165_abstraction-graphics-transprent-free-abstract-blue-png.png');
+        background-repeat: no-repeat;
+    
+        
+        font-family: calibri; 
+    }
+
+
+
+    
+    
+
+</style>
