@@ -19,7 +19,7 @@
 
     <!--CSS-->
 
-    <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="style.css">-->
 
 
 
@@ -43,79 +43,145 @@
 
     <hr style='padding-bottom: 30px;'>
 
-    <div class = 'row'>
-        <div class = 'col-9 col-xl-2'>
-            <label for = 'nume'>Nume angajat*</label>
-        </div>
-        <div class = 'col-3 col-xl-2'>
-            <input type = 'text' id = 'nume' placeholder = 'Nume Prenume' required>
-        </div>
-        <div class = 'col-0 col-xl-3'>
-        </div>
-        <div class = 'col-9 col-xl-2'>
-            <label for = 'echipa'>Echipa din care face parte*</label>
-        </div>
-        <div class = 'col-3 col-xl-2'>
-            <input type = 'text' id = 'echipa' placeholder = 'Departament' required>
-        </div>
-    </div>
-    <div class = 'row'>
-        <div class = 'col-9 col-xl-2'>
-            <label for = 'vechime'>Ani vechime*</label>
-        </div>
-        <div class = 'col-3 col-xl-2'>
-            <input type = 'number' id = 'vechime' required>
-        </div>
-        <div class = 'col-0 col-xl-3'>
+    <div class = 'container shadow-lg p-3 mb-5 bg-white rounded'>
 
+        <div class = 'row'>
+            <div class = 'col input-group mb-3'>
+                <div class = 'input-group-prepend'>
+                    <span class = 'input-group-text' id = 'basic-addon1'>Nume angajat*</span>
+                </div>
+                <div>
+                    <input 
+                        type = 'text' 
+                        class = 'form-control' 
+                        aria-label = 'Nume' 
+                        aria-describedby="basic-addon1" 
+                        id = 'nume' 
+                        placeholder = 'Nume Prenume' 
+                        required>
+                </div>
+            </div>
         </div>
-        <div class = 'col-9 col-xl-2'>
-            <label for = 'tel'>Număr de telefon*</label>
+        <div class = 'row'>
+            <div class = 'col input-group mb-3'>
+                <div class = 'input-group-prepend'>
+                    <span class = 'input-group-text' id = 'basic-addon2'>Echipa din care face parte*</span>
+                </div>
+                <div>
+                    <input 
+                        type = 'text' 
+                        class = 'form-control' 
+                        aria-label = 'Echipa' 
+                        aria-describedby="basic-addon2"
+                        id = 'echipa' 
+                        placeholder = 'Departament' 
+                        required>
+                </div>
+            </div>
         </div>
-        <div class = 'col-3 col-xl-2'>
-            <input type = 'text' id = 'tel' placeholder = '+40 123 456 789' required>
+        <div class = 'row'>
+            <div class = 'col input-group mb-3'>
+                <div class = 'input-group-prepend'>
+                    <span class = 'input-group-text' id = 'basic-addon3'>Ani vechime*</span>
+                </div>
+                <div>
+                    <input 
+                        type = 'number' 
+                        class = 'form-control' 
+                        aria-label = 'Vechime' 
+                        aria-describedby="basic-addon3"
+                        id = 'vechime' 
+                        required>
+                </div>
+            </div>
+        </div>
+        <div class = 'row'>
+            <div class = 'col input-group mb-3'>
+                <div class = 'input-group-prepend'>
+                    <span class = 'input-group-text' id = 'basic-addon4'>Număr de telefon*</span>
+                </div>
+                <div>
+                    <input 
+                        type = 'text' 
+                        class = 'form-control' 
+                        aria-label = 'Telefon' 
+                        aria-describedby="basic-addon4"
+                        id = 'tel' 
+                        placeholder = '+40 123 456 789' 
+                        required>
+                </div>
+            </div>
+        </div>
+        <div class = 'row'>
+            <div class = 'col input-group mb-3'>
+                <div class = 'input-group-prepend'>
+                    <span class = 'input-group-text' id = 'basic-addon5'>Salariu angajat*</span>
+                </div>
+                <div>
+                    <input 
+                        type = 'number' 
+                        class = 'form-control' 
+                        aria-label = 'Salariu' 
+                        aria-describedby="basic-addon5"
+                        id = 'salariu' 
+                        placeholder = 'Salariu brut' 
+                        required>
+                </div>
+            </div>
+        </div>
+        <div class = 'row'>
+            <div class = 'col input-group mb-3'>
+                <div class = 'input-group-prepend'>
+                    <span class = 'input-group-text' id = 'basic-addon6'>E-mail angajat*</span>
+                </div>
+                <div>
+                    <input 
+                        type = 'text' 
+                        class = 'form-control' 
+                        aria-label = 'Email' 
+                        aria-describedby="basic-addon6"
+                        id = 'email' 
+                        required>
+                </div>
+            </div>
+        </div>
+        <div class = 'row'>
+            <div class = 'col input-group mb-3'>
+                <div class = 'input-group-prepend'>
+                    <span class = 'input-group-text' id = 'basic-addon7'>Funcție ocupată*</span>
+                </div>
+                <div>
+                    <input 
+                        type = 'text' 
+                        class = 'form-control' 
+                        aria-label = 'Functie' 
+                        aria-describedby="basic-addon7"
+                        id = 'functie' 
+                        required>
+                </div>
+            </div>
+        </div>
+        <div class = 'row'>
+            <div class = 'col input-group mb-3'>
+                <div class = 'input-group-prepend'>
+                    <div class = 'input-group-text'>
+                        <input type = 'checkbox' aria-label= "Checkbox" id = 'impozit' name = 'da-sau-nu'>
+                    </div>
+                    <span class = 'input-group-text'>Scutit de impozit*</span>
+                </div>     
+            </div>
+        </div>
+        <div class = 'row'> 
+            <div class = 'col'>
+                <button type = 'button' style = "float:right;" class = 'btn btn-dark'>Salvează</button>
+            </div>
+        </div>
+        <div class = 'row'>
+            <div>
+                * - câmp obligatoriu
+            </div>
         </div>
     </div>
-    <div class = 'row'>
-        <div class = 'col-9 col-xl-2'>
-            <label for = 'salariu'>Salariu angajat*</label>
-        </div>
-        <div class = 'col-3 col-xl-2'>
-            <input type = 'number' id = 'salariu' placeholder = 'Salariu brut' required>
-        </div>
-        <div class = 'col-0 col-xl-3'>
-        </div>
-        <div class = 'col-9 col-xl-2'>
-            <label for = 'email'>E-mail angajat*</label>
-        </div>
-        <div class = 'col-3 col-xl-2'>
-            <input type = 'text' id = 'email' required>
-        </div>
-    </div>
-    <div class = 'row'>
-        <div class = 'col-9 col-xl-2'>
-            <label for = 'functie'>Funcție ocupată*</label>
-        </div>
-        <div class = 'col-3 col-xl-2'>
-            <input type = 'text' id = 'functie' required>
-        </div>
-        <div class = 'col-0 col-xl-3'>
-        </div>
-        <div class = 'col-9 col-xl-2'>
-            <label for = 'impozit'>Scutit de impozit*</label> 
-        </div>
-        <div class = 'col-3 col-xl-2'>
-            <input type = 'checkbox' id = 'impozit' name = 'da-sau-nu'>
-            <button type = 'submit' style = "float:right;" class = 'btn btn-dark'>Salvează</button>
-        </div>
-
-    </div>
-    <div class = 'row'>
-        <div class = 'col-12 col-xl-11', style = 'text-align: right; font-size: 14px; font-style:italic;'>
-            * - câmp obligatoriu
-        </div>
-    </div>
-
     <hr style='padding-bottom: 30px;'>
 
     <div class = 'row'>
