@@ -23,18 +23,16 @@
 
 
 
-    <title>Formular adăugare angajați</title>
+    <title>Aplicatie HR</title>
   </head>
   <body style = 'background-image: url("https://www.pngkit.com/png/full/5-57165_abstraction-graphics-transprent-free-abstract-blue-png.png");'>
 
 
 <div class = 'container'>
-
-    <div class = row>
-        <div class = 'col-12'>
+    <div class = 'row'>
+        <div class = 'col-12 text-center'>
             <h1 style='font-size:30px; margin-left: 0.6cm; padding-top:30px; padding-bottom: 30px;'>Formular adăugare angajați</h1>
         </div>
-
     </div>
 
     <hr style='padding-bottom: 30px;'>
@@ -61,26 +59,6 @@
         <div class = 'row'>
             <div class = 'col input-group mb-3 d-flex flex-row-reverse'>
                 <div class = 'input-group-prepend'>
-                    <span class = 'input-group-text bg-white border-0' id = 'basic-addon2' style = 'font-size: 14px;'>Echipa din care face parte*</span>
-                </div>
-            </div>
-            <div class = 'col'>
-                <div>
-                    <input 
-                        type = 'text' 
-                        style = 'font-size: 14px;'
-                        class = 'form-control bg-light' 
-                        aria-label = 'Echipa' 
-                        aria-describedby="basic-addon2"
-                        id = 'echipa' 
-                        placeholder = 'Departament' 
-                        required>
-                </div>
-            </div>
-        </div>
-        <div class = 'row'>
-            <div class = 'col input-group mb-3 d-flex flex-row-reverse'>
-                <div class = 'input-group-prepend'>
                     <span class = 'input-group-text bg-white border-0' id = 'basic-addon3' style = 'font-size: 14px;'>Ani vechime*</span>
                 </div>
             </div>
@@ -93,26 +71,6 @@
                         aria-label = 'Vechime' 
                         aria-describedby="basic-addon3"
                         id = 'vechime' 
-                        required>
-                </div>
-            </div>
-        </div>
-        <div class = 'row'>
-            <div class = 'col input-group mb-3 d-flex flex-row-reverse'>
-                <div class = 'input-group-prepend'>
-                    <span class = 'input-group-text bg-white border-0' id = 'basic-addon4' style = 'font-size: 14px;'>Număr de telefon*</span>
-                </div>
-            </div>
-            <div class = 'col'>
-                <div>
-                    <input 
-                        type = 'text' 
-                        style = 'font-size: 14px;'
-                        class = 'form-control bg-light' 
-                        aria-label = 'Telefon' 
-                        aria-describedby="basic-addon4"
-                        id = 'tel' 
-                        placeholder = '+40 123 456 789' 
                         required>
                 </div>
             </div>
@@ -140,25 +98,6 @@
         <div class = 'row'>
             <div class = 'col input-group mb-3 d-flex flex-row-reverse'>
                 <div class = 'input-group-prepend'>
-                    <span class = 'input-group-text bg-white border-0' id = 'basic-addon6' style = 'font-size: 14px;'>E-mail angajat*</span>
-                </div>
-            </div>
-            <div class = 'col'>
-                <div>
-                    <input 
-                        type = 'text' 
-                        style = 'font-size: 14px;'
-                        class = 'form-control bg-light' 
-                        aria-label = 'Email' 
-                        aria-describedby="basic-addon6"
-                        id = 'email' 
-                        required>
-                </div>
-            </div>
-        </div>
-        <div class = 'row'>
-            <div class = 'col input-group mb-3 d-flex flex-row-reverse'>
-                <div class = 'input-group-prepend'>
                     <span class = 'input-group-text bg-white border-0' id = 'basic-addon7' style = 'font-size: 14px;'>Funcție ocupată*</span>
                 </div>
             </div>
@@ -178,6 +117,65 @@
         <div class = 'row'>
             <div class = 'col input-group mb-3 d-flex flex-row-reverse'>
                 <div class = 'input-group-prepend'>
+                    <span class = 'input-group-text bg-white border-0' id = 'basic-addon2' style = 'font-size: 14px;'>Echipa din care face parte*</span>
+                </div>
+            </div>
+            <div class = 'col'>
+                <div>
+                    <input 
+                        type = 'text' 
+                        style = 'font-size: 14px;'
+                        class = 'form-control bg-light' 
+                        aria-label = 'Echipa' 
+                        aria-describedby="basic-addon2"
+                        id = 'echipa' 
+                        placeholder = 'Departament' 
+                        required>
+                </div>
+            </div>
+        </div>
+        <div class = 'row'>
+            <div class = 'col input-group mb-3 d-flex flex-row-reverse'>
+                <div class = 'input-group-prepend'>
+                    <span class = 'input-group-text bg-white border-0' id = 'basic-addon4' style = 'font-size: 14px;'>Număr de telefon*</span>
+                </div>
+            </div>
+            <div class = 'col'>
+                <div>
+                    <input 
+                        type = 'text' 
+                        style = 'font-size: 14px;'
+                        class = 'form-control bg-light' 
+                        aria-label = 'Telefon' 
+                        aria-describedby="basic-addon4"
+                        id = 'tel' 
+                        placeholder = '+40 123 456 789' 
+                        required>
+                </div>
+            </div>
+        </div>
+        <div class = 'row'>
+            <div class = 'col input-group mb-3 d-flex flex-row-reverse'>
+                <div class = 'input-group-prepend'>
+                    <span class = 'input-group-text bg-white border-0' id = 'basic-addon6' style = 'font-size: 14px;'>E-mail angajat*</span>
+                </div>
+            </div>
+            <div class = 'col'>
+                <div>
+                    <input 
+                        type = 'text' 
+                        style = 'font-size: 14px;'
+                        class = 'form-control bg-light' 
+                        aria-label = 'Email' 
+                        aria-describedby="basic-addon6"
+                        id = 'email' 
+                        required>
+                </div>
+            </div>
+        </div>
+        <div class = 'row'>
+            <div class = 'col input-group mb-3 d-flex flex-row-reverse'>
+                <div class = 'input-group-prepend'>
                     <span class = 'input-group-text bg-white border-0' id = 'basic-addon8' style = 'font-size: 14px;'>Scutit de impozit*</span>
                 </div>
             </div>
@@ -187,6 +185,17 @@
                 </div>
             </div>
         </div>
+        
+        <div class = 'row'>
+            <div class = 'col-2'>
+            </div>
+            <div class = 'col-8'>
+                <div class = 'alert d-none' id = 'alerta' role = 'alert'>
+                </div>
+            </div>
+            <div class = 'col-2'>
+            </div>
+        </div>
         <div class = 'row'>
             <div class = 'col text-center' style = 'font-size: 12px; font-style: italic;'>
                 Câmpurile marcate cu * sunt obligatorii 
@@ -194,7 +203,7 @@
         </div>
         <div class = 'row'> 
             <div class = 'col text-center mt-4'>
-                <button type = 'button' class = 'btn btn-secondary'>Salvează</button>
+                <button type = 'submit' class = 'btn btn-secondary'>Salvează</button>
             </div>
         </div>
         
@@ -202,34 +211,20 @@
     <hr style='padding-bottom: 30px;'>
 
     <div class = 'row'>
-        <div class = 'col-12'>
+        <div class = 'col-12 text-center'>
             <h1 style='font-size:30px; margin-left: 0.6cm; margin-bottom: 30px;'>Tabel angajați</h1>
         </div>
     </div>
     <hr style='padding-bottom: 30px; padding-top: 30px;'>
-  <div class = 'row'>
-    <div class = 'col-12' class = 'text-center'>
-        <div id = 'myGrid' class = 'ag-theme-alpine col-12' style = 'height:500px; width:2000px;'>
+    <div class = 'row'>
+        <div class = 'col-12' class = 'text-center'>
+            <div id = 'myGrid' class = 'ag-theme-alpine col-12' style = 'height:500px; width:2000px;'>
+            </div>
+            <script type = 'text/javascript' charset = 'utf-8'>
+            </script>
         </div>
-
-        <script type = 'text/javascript' charset = 'utf-8'>
-        </script>
     </div>
-  
-
-    </div>
-
- 
-
-
 </div>
-
-
-
-
-
-
-
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -8,11 +8,10 @@ var echipa = document.getElementById('echipa');
 var tel = document.getElementById('tel');
 var email = document.getElementById('email');
 var impozit = document.getElementById('impozit');
-
-
-
-
 var buton = document.querySelector('button');
+var alerta = document.getElementById('alerta');
+
+
 
 //ag Grid
 
@@ -69,56 +68,55 @@ axios.get('http://localhost:3000/api/employee')
     })
 
 
+function alertaRosie() {
+    alerta.innerHTML = 'Completează câmpurile obligatorii!';
+    alerta.className = 'alert alert-danger text-center';
+    setTimeout(function(){  alerta.classList.add("d-none"); }, 5000);
+}
+function alertaVerde() {
+    alerta.innerHTML = 'Angajatul a fost adăugat cu succes!';
+    alerta.className = 'alert alert-success text-center';
+    setTimeout(function(){  alerta.classList.add("d-none"); }, 5000);
+}
 
-
-
+  
 var functieEveniment = function(event) {
 
     if ((nume.value === '') || (nume.value.trim().length === 0)) {
         console.error('Numele angajatului nu a fost completat');
-        nume.placeholder = 'Camp obligatoriu!';
-        nume.style.backgroundColor = '#ff9999';
+        alertaRosie();
         return;
     }
-
-
     if ((vechime.value === '') || (vechime.value.trim().length === 0)) {
         console.error('Vechimea angajatului nu a fost completata');
-        vechime.placeholder = 'Camp obligatoriu!';
-        vechime.style.backgroundColor = '#ff9999';
+        alertaRosie();
         return;
     }
     if ((salariu.value === '') || (salariu.value.trim().length === 0)) {
         console.error('Salariul angajatului nu a fost completat');
-        salariu.placeholder = 'Camp obligatoriu!';
-        salariu.style.backgroundColor = '#ff9999';
+        alertaRosie();
         return;
     }
     if ((functie.value === '') || (functie.value.trim().length === 0)) {
         console.error('Functia angajatului nu a fost completata');
-        functie.placeholder = 'Camp obligatoriu!';
-        functie.style.backgroundColor = '#ff9999';
+        alertaRosie();
         return;
     }
     if ((echipa.value === '') || (echipa.value.trim().length === 0)) {
         console.error('Echipa in care lucreaza nu a fost completata');
-        echipa.placeholder = 'Camp obligatoriu!';
-        echipa.style.backgroundColor = '#ff9999';
+        alertaRosie();
         return;
     }
     if ((tel.value === '') || (tel.value.trim().length === 0)) {
         console.error('Numarul de telefon nu a fost completat');
-        tel.placeholder = 'Camp obligatoriu!';
-        tel.style.backgroundColor = '#ff9999';
+        alertaRosie();
         return;
     }
     if ((email.value === '') || (email.value.trim().length === 0)) {
         console.error('E-mail-ul nu a fost completat');
-        email.placeholder = 'Camp obligatoriu!';
-        email.style.backgroundColor = '#ff9999';
+        alertaRosie();
         return;
     }
-
     axios.post('http://localhost:3000/api/employee',
                 {nume: nume.value,
                 vechime: vechime.value,
@@ -131,15 +129,11 @@ var functieEveniment = function(event) {
                 })
             .then(function (response) {
                 console.log(response.data);
-
                 if (impozit.checked === true) {
                     impozit.value = 'Da';
                     } else {
                     impozit.value = 'Nu'; 
                     }
-                 
-                
-                
                     rowData.push(
                         { numeAG: nume.value,
                         vechimeAG: vechime.value,
@@ -150,11 +144,7 @@ var functieEveniment = function(event) {
                         mailAG: email.value,
                         impozitAG: impozit.value
                         });
-                
-                
                     gridOptions.api.setRowData(gridOptions.rowData); 
-                    
-                
                     vechime.value = '';
                     nume.value = '';
                     salariu.value = '';
@@ -162,36 +152,21 @@ var functieEveniment = function(event) {
                     echipa.value = '';
                     tel.value = '';
                     email.value = '';   
-
-
-
-
             })
             .catch(function(error) {
                 console.log (error.status);
             })
-    
 
-   
-
+    nume.value = '';
+    vechime.value = '';
+    salariu.value = '';
+    functie.value = '';
+    echipa.value = '';
+    tel.value = '';
+    email.value = '';
     impozit.checked = false;
-
-    nume.placeholder = 'Nume Prenume';
-    nume.style.backgroundColor = 'white';
-    vechime.placeholder = '';
-    vechime.style.backgroundColor = 'white';
-    salariu.placeholder = 'Salariu brut';
-    salariu.style.backgroundColor = 'white';
-    echipa.placeholder = 'Departament';
-    echipa.style.backgroundColor = 'white';
-    tel.placeholder = '+40 123 456 789';
-    tel.style.backgroundColor = 'white';
-    functie.placeholder = '';
-    functie.style.backgroundColor = 'white';
-    email.placeholder = '';
-    email.style.backgroundColor = 'white';
+    alertaVerde();
 }
-
 buton.addEventListener('click', functieEveniment);
 
 
