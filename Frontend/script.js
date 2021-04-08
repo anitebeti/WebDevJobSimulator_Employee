@@ -80,7 +80,9 @@ function alertaVerde() {
 }
 
   
-var functieEveniment = function(event) {
+//var functieEveniment = function(event) {
+
+async function functieEveniment (event) {
 
     if ((nume.value === '') || (nume.value.trim().length === 0)) {
         console.error('Numele angajatului nu a fost completat');
@@ -157,15 +159,18 @@ var functieEveniment = function(event) {
                 console.log (error.status);
             })
 
-    nume.value = '';
-    vechime.value = '';
-    salariu.value = '';
-    functie.value = '';
-    echipa.value = '';
-    tel.value = '';
-    email.value = '';
-    impozit.checked = false;
+    await function awaitFunction () {
+        nume.value = '';
+        vechime.value = '';
+        salariu.value = '';
+        functie.value = '';
+        echipa.value = '';
+        tel.value = '';
+        email.value = '';
+        impozit.checked = false;
+    }
     alertaVerde();
+    
 }
 buton.addEventListener('click', functieEveniment);
 
