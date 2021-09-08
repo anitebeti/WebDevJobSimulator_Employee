@@ -79,9 +79,6 @@ function alertaVerde() {
     setTimeout(function(){  alerta.classList.add("d-none"); }, 5000);
 }
 
-  
-//var functieEveniment = function(event) {
-
 async function functieEveniment (event) {
 
     if ((nume.value === '') || (nume.value.trim().length === 0)) {

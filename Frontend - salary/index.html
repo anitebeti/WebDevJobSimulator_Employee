@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+    <!--<link rel = 'stylesheet' href = 'style.css'>-->
+
+    <title>Calculator salarii</title>
+    </head>
+    
+        <body style = 'background-image: url("https://www.pngkit.com/png/full/5-57165_abstraction-graphics-transprent-free-abstract-blue-png.png");'>
+            <nav class = 'navbar navbar-expand navbar-light flex-column flex-md-row header-nav--nav'>
+                <div class = 'container'>
+                    <div class = 'd-md-flex justify-content-between'>
+                        <div class = 'navbar-brand d-flex justify-content-between align-items-center'>
+                            <a href = "#">Aplicație HR</a>
+                        </div>
+                        <div class = 'collapse navbar-collapse justify-content-center align-items-center' id = 'navbarNav'>
+                            <div class = 'header-nav--main'>
+                                <ul class = 'navbar-nav'>
+                                    <li class = 'navbar-item'><a class = 'nav-link' href = "/Frontend - employee/index.html">Angajați</a></li>
+                                    <li class = 'navbar-item'><a class = 'nav-link' href = "/Frontend - salary/index.html">Salarii</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class = 'container'>
+                <div class = 'row'>
+                    <div class = 'col-12 col-xl-6'>
+
+                        <div class = 'container'>
+                            <div class = 'row'>
+                                <div class = 'col text-center'>
+                                    <h1 style='font-size:30px; margin-left: 0.6cm; padding-top:30px; padding-bottom: 30px;'>Calculator Salarii</h1>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class = 'row'>
+                                <div class = 'col'>
+<!--Calculator salariul-->                                    
+                                    <div class = 'container shadow-lg p-3 bg-white rounded' style = 'font-size: 14px;' >
+                                        <div class = 'row'>
+                                            <div class = 'col input-group d-flex flex-row-reverse'>
+                                                <div class = 'input-group-prepend mb-3 mx-auto' style ="padding-bottom:20px;">                                       
+                                                    <input type = 'number' id = 'salariu'  class = 'form-control bg-light text-center' placeholder = 'Introduceți salariul' required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class = 'row'>
+                                            <div class = 'col input-group d-flex flex-row-reverse'>
+                                                <div class = 'input-group-prepend'>
+                                                    <span for = 'brut' class = 'input-group-text bg-white border-0' id = 'basic-addon8' style = 'font-size: 14px;'>Salariu brut</span>
+                                                </div>
+                                            </div>
+                                            <div class = 'col'>
+                                                <div class = 'input-group-text border-0 bg-white'>
+                                                    <input type = 'radio' id = 'brut' name = 'brut_sau_net' value = 'Brut' required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class = 'row'>
+                                            <div class = 'col input-group d-flex flex-row-reverse'>
+                                                <div class = 'input-group-prepend'>
+                                                    <span for = 'net' class = 'input-group-text bg-white border-0' id = 'basic-addon8' style = 'font-size: 14px;'>Salariu net</span>
+                                                </div>
+                                            </div>
+                                            <div class = 'col'>
+                                                <div class = 'input-group-text border-0 bg-white'>
+                                                    <input type = 'radio' id = 'net' name = 'brut_sau_net' value = 'Net' required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class = 'row'>
+                                            <div class = 'col input-group d-flex flex-row-reverse'>
+                                                <div class = 'input-group-prepend'>
+                                                    <span for = 'impozit' class = 'input-group-text bg-white border-0' id = 'basic-addon8' style = 'font-size: 14px;'>Scutit impozit</span>
+                                                </div>
+                                            </div>
+                                            <div class = 'col'>
+                                                <div class = 'input-group-text border-0 bg-white'>
+                                                    <input type="checkbox" id = 'impozit'>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class = 'row'>
+                                            <div class = 'col-4 col-xl-5 text-center mx-auto' style = 'padding-top: 33px;'>
+                                                <button type = 'submit' class = 'btn btn-dark' id = 'buton'>Calculează</button>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class = 'col'>
+<!--Modifica salariu-->
+                                    <div class = 'container shadow-lg p-3 bg-white rounded' style = 'font-size: 14px;'>
+                                        <div class = 'row'>
+                                            <div class ='col mb-3 form form-group'>
+                                                <select class = 'form-control bg-light text-center text-muted' id = 'dropdown'>
+                                                    <option>Selectează angajatul</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class = 'row'>
+                                            <div class = 'col input-group d-flex mt-3 flex-row-reverse'>
+                                                <label for = 'salariuNou' class = 'mx-auto'>Introduceți salariul nou</label>
+                                            </div>
+                                        </div>
+                                        <div class = 'row'>
+                                            <div class = 'col input-group-prepend mt-3 mb-3 mx-auto'>
+                                                <input type = 'number' id = 'salariuNou' class = 'form-control bg-light text-center' placeholder = 'Salariu brut'>
+                                            </div>
+                                        </div>
+                                        <div class = 'row'>
+                                            <div class = 'col text-center mx-auto' style = 'padding-top: 44px;'>
+                                                <button id = 'butonSalariu' class = 'btn btn-dark'>Modifică salariul</button>
+                                            </div>
+                                        </div>
+            
+                                    </div>
+                                </div>
+                            </div>
+                           
+                           <!--  <div class = 'col input-group d-flex flex-row-reverse'>
+                                <div class = 'input-group-prepend mb-3 mx-auto'>                                       
+                                    <input type = 'number' id = 'salariu'  class = 'form-control bg-light text-center' placeholder = 'Introduceți salariul' required>
+                                </div>
+                            </div>
+                             -->
+                        </div>
+
+                    </div>
+                    
+                     
+
+<!--Raport salariu-->
+                    <div class = ' col-12 col-xl-6'>
+                        <div class = 'container'>
+                            <div class = 'row'>
+                                <div class = 'col text-center'>
+                                    <h1 style='font-size:30px; margin-left: 0.6cm; padding-top:30px; padding-bottom: 30px;'>Raport de Salariu</h1>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class = 'container shadow-lg p-3 mb-5 bg-white rounded' style = 'font-size: 14px;' >
+                                <div class = 'row'>
+                                    <div class = 'col'>
+                                        <table class = 'table table-striped table-hover' id = 'tabel'>
+                                            <thead>
+                                                <tr>
+                                                    <th>Nume</th>
+                                                    <th>Suma</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="font-weight: bold;">Salariu Brut</td>
+                                                    <td id = 'salariuBrut'> </td>  
+                                                </tr>
+                                                <tr>
+                                                    <td>Asigurări Sociale (CAS)</td>
+                                                    <td id = 'CASTabel'> </td>              
+                                                </tr>
+                                                <tr>
+                                                    <td>Asigurări Sociale de Sănătate (CASS)</td>
+                                                    <td id = 'CASSTabel'> </td>  
+                                                </tr>
+                                                <tr>
+                                                    <td>Impozit pe Venit</td>
+                                                    <td id = 'impozitTabel'> </td>  
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td style="font-weight: bold;">Salariu Net</td>
+                                                    <td id = 'salariuNet'> </td>  
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        
+            
+
+
+   
+
+            <!-- Optional JavaScript; choose one of the two! -->
+
+            <!-- Option 1: Bootstrap Bundle with Popper -->
+            <scrip src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+            <script src="script.js"></script>
+    
+
+        </body>
+</html>
