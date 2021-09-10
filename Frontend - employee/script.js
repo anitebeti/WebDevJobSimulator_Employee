@@ -133,24 +133,24 @@ async function functieEveniment (event) {
                     } else {
                     impozit.value = 'Nu'; 
                     }
-                    rowData.push(
-                        { numeAG: nume.value,
-                        vechimeAG: vechime.value,
-                        salariuAG: salariu.value,
-                        functieAG: functie.value,
-                        echipaAG: echipa.value,
-                        telAG: tel.value,
-                        mailAG: email.value,
-                        impozitAG: impozit.value
-                        });
-                    gridOptions.api.setRowData(gridOptions.rowData); 
-                    vechime.value = '';
-                    nume.value = '';
-                    salariu.value = '';
-                    functie.value = '';
-                    echipa.value = '';
-                    tel.value = '';
-                    email.value = '';   
+                rowData.push(
+                    { numeAG: nume.value,
+                    vechimeAG: vechime.value,
+                    salariuAG: salariu.value,
+                    functieAG: functie.value,
+                    echipaAG: echipa.value,
+                    telAG: tel.value,
+                    mailAG: email.value,
+                    impozitAG: impozit.value
+                    });
+                gridOptions.api.setRowData(gridOptions.rowData); 
+                vechime.value = '';
+                nume.value = '';
+                salariu.value = '';
+                functie.value = '';
+                echipa.value = '';
+                tel.value = '';
+                email.value = '';   
             })
             .catch(function(error) {
                 console.log (error.status);
